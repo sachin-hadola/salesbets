@@ -1,0 +1,419 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact SalesBets - Get in Touch</title>
+    <meta name="description"
+        content="Contact SalesBets for support, partnerships, or general inquiries. We're here to help with your no-risk betting experience.">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    <!-- Google Fonts -->
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700;800&family=Sora:wght@400;600;700;800&display=swap"
+        rel="stylesheet">
+    <!-- Custom CSS -->
+    <link href="assets/css/style.css" rel="stylesheet">
+</head>
+
+<body>
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top" id="mainNav">
+        <div class="container">
+            <a class="navbar-brand fw-bold" href="index.html">
+                <i class="fas fa-chart-line me-2"></i>SalesBets
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="ownership.html">Ownership</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="teams.html">Teams</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="apps.html">Apps</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="contact.html">Contact</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="contact-hero py-5">
+        <div class="container">
+            <div class="row align-items-center min-vh-100">
+                <div class="col-lg-8 mx-auto text-center">
+                    <div class="hero-content">
+                        <h1 class="hero-title mb-4">
+                            Get in <span class="text-gradient">Touch</span>
+                        </h1>
+                        <p class="hero-subtitle mb-4">
+                            Have questions about SalesBets? Want to partner with us?
+                            We'd love to hear from you. Reach out and let's start a conversation.
+                        </p>
+                        <div class="hero-buttons">
+                            <a href="#contact-form" class="btn btn-primary btn-lg me-3 mb-3">
+                                <i class="fas fa-envelope me-2"></i>Send Message
+                            </a>
+                            <a href="#contact-info" class="btn btn-outline-primary btn-lg mb-3">
+                                <i class="fas fa-phone me-2"></i>Contact Info
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Form Section -->
+    <section id="contact-form" class="contact-form py-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12 mx-auto">
+                    <div class="form-container">
+                        <div class="row">
+                            <div class="col-lg-8">
+                                <div class="form-content">
+                                    <h2 class="form-title mb-4">Send us a Message</h2>
+                                    <p class="form-subtitle mb-4">Fill out the form below and we'll get back to you
+                                        within 24 hours.</p>
+
+                                    <form id="contactForm" class="contact-form-element">
+                                        <div class="row">
+                                            <div class="col-md-6 mb-3">
+                                                <label for="firstName" class="form-label">First Name *</label>
+                                                <input type="text" class="form-control" id="firstName" name="firstName"
+                                                    required>
+                                            </div>
+                                            <div class="col-md-6 mb-3">
+                                                <label for="lastName" class="form-label">Last Name *</label>
+                                                <input type="text" class="form-control" id="lastName" name="lastName"
+                                                    required>
+                                            </div>
+                                        </div>
+
+                                        <div class="row">
+                                            <div class="col-md-6 mb-3">
+                                                <label for="email" class="form-label">Email Address *</label>
+                                                <input type="email" class="form-control" id="email" name="email"
+                                                    required>
+                                            </div>
+                                            <div class="col-md-6 mb-3">
+                                                <label for="phone" class="form-label">Phone Number</label>
+                                                <input type="tel" class="form-control" id="phone" name="phone">
+                                            </div>
+                                        </div>
+
+                                        <div class="mb-3">
+                                            <label for="subject" class="form-label">Subject *</label>
+                                            <select class="form-select" id="subject" name="subject" required>
+                                                <option value="">Select a subject</option>
+                                                <option value="general">General Inquiry</option>
+                                                <option value="support">Technical Support</option>
+                                                <option value="partnership">Partnership Opportunity</option>
+                                                <option value="media">Media Inquiry</option>
+                                                <option value="careers">Career Opportunities</option>
+                                                <option value="other">Other</option>
+                                            </select>
+                                        </div>
+
+                                        <div class="mb-3">
+                                            <label for="message" class="form-label">Message *</label>
+                                            <textarea class="form-control" id="message" name="message" rows="5"
+                                                placeholder="Tell us how we can help you..." required></textarea>
+                                        </div>
+
+                                        <div class="mb-3 form-check">
+                                            <input type="checkbox" class="form-check-input" id="newsletter"
+                                                name="newsletter">
+                                            <label class="form-check-label" for="newsletter">
+                                                Subscribe to our newsletter for updates and news
+                                            </label>
+                                        </div>
+
+                                        <button type="submit" class="btn btn-primary btn-lg w-100">
+                                            <i class="fas fa-paper-plane me-2"></i>Send Message
+                                        </button>
+                                    </form>
+                                </div>
+                            </div>
+                            <div class="col-lg-4">
+                                <div class="contact-sidebar">
+                                    <h5 class="sidebar-title">Why Contact Us?</h5>
+                                    <div class="sidebar-features">
+                                        <div class="feature-item">
+                                            <i class="fas fa-question-circle"></i>
+                                            <div>
+                                                <h6>General Support</h6>
+                                                <p>Get help with your account or general questions about SalesBets.</p>
+                                            </div>
+                                        </div>
+                                        <div class="feature-item">
+                                            <i class="fas fa-handshake"></i>
+                                            <div>
+                                                <h6>Partnerships</h6>
+                                                <p>Explore partnership opportunities and collaboration possibilities.
+                                                </p>
+                                            </div>
+                                        </div>
+                                        <div class="feature-item">
+                                            <i class="fas fa-bug"></i>
+                                            <div>
+                                                <h6>Technical Issues</h6>
+                                                <p>Report bugs or technical problems with our platform or apps.</p>
+                                            </div>
+                                        </div>
+                                        <div class="feature-item">
+                                            <i class="fas fa-newspaper"></i>
+                                            <div>
+                                                <h6>Media Inquiries</h6>
+                                                <p>Press and media requests for interviews or information.</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Info Section -->
+    <section id="contact-info" class="contact-info py-5 bg-light">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8 mx-auto text-center">
+                    <h2 class="section-title mb-5">Contact Information</h2>
+                    <p class="lead mb-5">Multiple ways to reach us. Choose what works best for you.</p>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-4 col-md-6 mb-4">
+                    <div class="contact-card">
+                        <div class="contact-icon">
+                            <i class="fas fa-envelope"></i>
+                        </div>
+                        <h5>Email Us</h5>
+                        <p class="contact-text">Send us an email and we'll respond within 24 hours.</p>
+                        <a href="mailto:info@salesbets.com" class="contact-link">info@salesbets.com</a>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 mb-4">
+                    <div class="contact-card">
+                        <div class="contact-icon">
+                            <i class="fas fa-phone"></i>
+                        </div>
+                        <h5>Call Us</h5>
+                        <p class="contact-text">Speak directly with our support team.</p>
+                        <a href="tel:+1-555-SALESBETS" class="contact-link">+1 (555) SALESBETS</a>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 mb-4">
+                    <div class="contact-card">
+                        <div class="contact-icon">
+                            <i class="fas fa-map-marker-alt"></i>
+                        </div>
+                        <h5>Visit Us</h5>
+                        <p class="contact-text">Our headquarters in the heart of the city.</p>
+                        <a href="#" class="contact-link">123 Sports Avenue<br>New York, NY 10001</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="faq-section py-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8 mx-auto text-center">
+                    <h2 class="section-title mb-5">Frequently Asked Questions</h2>
+                    <p class="lead mb-5">Quick answers to common questions about SalesBets.</p>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-8 mx-auto">
+                    <div class="accordion" id="faqAccordion">
+                        <div class="accordion-item">
+                            <h2 class="accordion-header" id="faq1">
+                                <button class="accordion-button" type="button" data-bs-toggle="collapse"
+                                    data-bs-target="#collapse1" aria-expanded="true" aria-controls="collapse1">
+                                    How does no-risk betting work?
+                                </button>
+                            </h2>
+                            <div id="collapse1" class="accordion-collapse collapse show" aria-labelledby="faq1"
+                                data-bs-parent="#faqAccordion">
+                                <div class="accordion-body">
+                                    No-risk betting means you never put your own money at stake. You make predictions
+                                    about athlete performance, and if you're correct, you win rewards and recognition.
+                                    If you're wrong, you don't lose any money - it's completely risk-free!
+                                </div>
+                            </div>
+                        </div>
+                        <div class="accordion-item">
+                            <h2 class="accordion-header" id="faq2">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                    data-bs-target="#collapse2" aria-expanded="false" aria-controls="collapse2">
+                                    What rewards can I win?
+                                </button>
+                            </h2>
+                            <div id="collapse2" class="accordion-collapse collapse" aria-labelledby="faq2"
+                                data-bs-parent="#faqAccordion">
+                                <div class="accordion-body">
+                                    Rewards include points, badges, exclusive access to content, merchandise, and
+                                    special recognition within the SalesBets community. The more accurate your
+                                    predictions, the more rewards you can earn!
+                                </div>
+                            </div>
+                        </div>
+                        <div class="accordion-item">
+                            <h2 class="accordion-header" id="faq3">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                    data-bs-target="#collapse3" aria-expanded="false" aria-controls="collapse3">
+                                    How do I download the apps?
+                                </button>
+                            </h2>
+                            <div id="collapse3" class="accordion-collapse collapse" aria-labelledby="faq3"
+                                data-bs-parent="#faqAccordion">
+                                <div class="accordion-body">
+                                    Visit our Apps page to find all available applications. Each app is available on the
+                                    Google Play Store for Android devices. Simply click the download button and follow
+                                    the installation instructions.
+                                </div>
+                            </div>
+                        </div>
+                        <div class="accordion-item">
+                            <h2 class="accordion-header" id="faq4">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                    data-bs-target="#collapse4" aria-expanded="false" aria-controls="collapse4">
+                                    Can I follow multiple teams?
+                                </button>
+                            </h2>
+                            <div id="collapse4" class="accordion-collapse collapse" aria-labelledby="faq4"
+                                data-bs-parent="#faqAccordion">
+                                <div class="accordion-body">
+                                    Absolutely! You can follow as many teams as you want and make predictions for
+                                    athletes from any team. Our platform is designed to give you the flexibility to
+                                    engage with the entire SalesBets ecosystem.
+                                </div>
+                            </div>
+                        </div>
+                        <div class="accordion-item">
+                            <h2 class="accordion-header" id="faq5">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                    data-bs-target="#collapse5" aria-expanded="false" aria-controls="collapse5">
+                                    Is there a minimum age requirement?
+                                </button>
+                            </h2>
+                            <div id="collapse5" class="accordion-collapse collapse" aria-labelledby="faq5"
+                                data-bs-parent="#faqAccordion">
+                                <div class="accordion-body">
+                                    Yes, you must be at least 18 years old to participate in SalesBets activities. We
+                                    take responsible gaming seriously and verify age requirements for all users.
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta-section py-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8 mx-auto text-center">
+                    <h2 class="cta-title mb-4">Ready to Get Started?</h2>
+                    <p class="cta-subtitle mb-4">Join thousands of fans who are already experiencing the future of
+                        sports betting.</p>
+                    <a href="ownership.html" class="btn btn-light btn-lg me-3">
+                        <i class="fas fa-users me-2"></i>Explore Ownership
+                    </a>
+                    <a href="apps.html" class="btn btn-outline-light btn-lg">
+                        <i class="fas fa-download me-2"></i>Download Apps
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer bg-dark text-light py-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-4 mb-4">
+                    <h5 class="footer-title">
+                        <i class="fas fa-trophy me-2"></i>NSBLPA
+                    </h5>
+                    <p class="footer-text">The premier platform for professional sales betting competition.</p>
+                    <div class="social-links">
+                        <a href="#" class="social-link"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-facebook"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-linkedin"></i></a>
+                    </div>
+                </div>
+                <div class="col-lg-2 col-md-6 mb-4">
+                    <h6 class="footer-heading">Quick Links</h6>
+                    <ul class="footer-links">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="teams.html">Teams</a></li>
+                        <li><a href="apps.html">Apps</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-2 col-md-6 mb-4">
+                    <h6 class="footer-heading">Company</h6>
+                    <ul class="footer-links">
+                        <li><a href="ownership.html">Ownership</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                        <li><a href="#">Privacy Policy</a></li>
+                        <li><a href="#">Terms of Service</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-4 mb-4">
+                    <h6 class="footer-heading">Newsletter</h6>
+                    <p class="footer-text">Stay updated with the latest league news and updates.</p>
+                    <div class="newsletter-form">
+                        <div class="input-group">
+                            <input type="email" class="form-control" placeholder="Enter your email">
+                            <button class="btn btn-primary" type="button">Subscribe</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <hr class="footer-divider">
+            <div class="row">
+                <div class="col-md-6">
+                    <p class="footer-copyright">&copy; 2025 NSBLPA. All rights reserved.</p>
+                </div>
+                <div class="col-md-6 text-md-end">
+                    <p class="footer-copyright">Made with <i class="fas fa-heart text-danger"></i> for professionals</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Custom JS -->
+    <script src="assets/js/script.js"></script>
+</body>
+
+</html>

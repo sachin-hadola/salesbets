@@ -1,0 +1,49 @@
+/* NSBLPA Theme Overrides - league/magazine style */
+
+:root {
+    --nsblpa-primary: #c1121f; /* deep red */
+    --nsblpa-secondary: #fca311; /* golden accent */
+    --nsblpa-dark: #0b132b; /* midnight */
+}
+
+/* Hero variant */
+.nsblpa-hero .hero-overlay { background: rgba(11,19,43,0.55); }
+.nsblpa-hero .hero-title { text-shadow: 0 6px 24px rgba(0,0,0,0.35); }
+.nsblpa-hero .btn-primary { background: linear-gradient(135deg, var(--nsblpa-primary), #930810); }
+.nsblpa-hero .btn-outline-light:hover { color: var(--nsblpa-secondary) !important; }
+
+/* News cards */
+.news-card { background: #fff; border-radius: 18px; overflow: hidden; box-shadow: 0 10px 24px rgba(0,0,0,0.08); transition: transform .25s ease, box-shadow .25s ease; }
+.news-card:hover { transform: translateY(-6px); box-shadow: 0 16px 36px rgba(0,0,0,0.12); }
+.news-image { height: 160px; background-size: cover; background-position: center; }
+.news-content { padding: 1rem; }
+.news-content h6 { font-weight: 800; margin: .5rem 0 0.25rem; }
+.news-content a { color: var(--nsblpa-primary); text-decoration: none; font-weight: 700; }
+.news-content a:hover { text-decoration: underline; }
+
+/* Overview icons */
+.overview-card { background: #fff; border-radius: 18px; padding: 2rem; text-align: center; box-shadow: 0 10px 24px rgba(0,0,0,0.06); transition: transform .25s ease; }
+.overview-card:hover { transform: translateY(-6px); }
+.overview-icon { width:72px; height:72px; border-radius:50%; display:flex; align-items:center; justify-content:center; background: linear-gradient(135deg, var(--nsblpa-secondary), #e59500); color:#fff; margin:0 auto 1rem; font-size:1.5rem; }
+
+/* Standings */
+.standings-table thead { background: var(--nsblpa-dark) !important; color: #fff; }
+.standings-table tbody tr:hover { background: #f8fafc; }
+
+/* Highlights */
+.highlight-card { background: #fff; border-radius: 16px; padding: 1.25rem; box-shadow: 0 10px 24px rgba(0,0,0,0.06); border-left: 6px solid var(--nsblpa-primary); }
+.highlight-card .time { font-weight: 800; color: var(--nsblpa-primary); margin-bottom: .5rem; }
+
+/* Next match / live */
+.next-card { background:#fff; border-radius:18px; box-shadow:0 10px 24px rgba(0,0,0,0.08); }
+.live-banner { position: relative; border-radius:18px; overflow: hidden; box-shadow:0 10px 24px rgba(0,0,0,0.12); }
+.live-banner .overlay { position:absolute; inset:0; background:rgba(11,19,43,.55); }
+.live-banner .content { position:relative; }
+
+/* Gallery */
+.gallery-item { padding-top: 100%; width:100%; border-radius:12px; background-size:cover; background-position:center; box-shadow: 0 8px 18px rgba(0,0,0,0.08); }
+
+/* Footer accent links */
+.footer a:hover { color: var(--nsblpa-secondary); }
+
+

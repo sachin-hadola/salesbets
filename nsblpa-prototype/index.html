@@ -1,0 +1,1574 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NSBLPA - National Sales Betting League Players Association</title>
+    <meta name="description"
+        content="Welcome to NSBLPA - The premier platform for professional sales betting. Join our league and experience competitive sports betting like never before.">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    <!-- Google Fonts -->
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Poppins:wght@300;400;600;700;800;900&display=swap"
+        rel="stylesheet">
+    <link href="assets/css/nsblpa.css" rel="stylesheet">
+    <style>
+        :root {
+            --primary-color: #6366f1;
+            --primary-dark: #4338ca;
+            --secondary-color: #10b981;
+            --accent-color: #f59e0b;
+            --danger-color: #ef4444;
+            --dark-color: #0f172a;
+            --light-color: #f8fafc;
+            --gradient-primary: linear-gradient(135deg, #6366f1 0%, #8b5cf6 100%);
+            --gradient-secondary: linear-gradient(135deg, #10b981 0%, #06b6d4 100%);
+            --gradient-accent: linear-gradient(135deg, #f59e0b 0%, #ef4444 100%);
+            --shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+            --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+            --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+            --shadow-xl: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', system-ui, -apple-system, sans-serif;
+            line-height: 1.6;
+            color: var(--dark-color);
+            overflow-x: hidden;
+        }
+
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6 {
+            font-family: 'Poppins', sans-serif;
+            font-weight: 700;
+            line-height: 1.2;
+        }
+
+        .text-gradient {
+            background: var(--nsblpa-primary);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        /* Navigation */
+        .navbar {
+            background: rgba(15, 23, 42, 0.95) !important;
+            backdrop-filter: blur(20px);
+            transition: all 0.3s ease;
+            padding: 1rem 0;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .navbar.scrolled {
+            background: rgba(15, 23, 42, 0.98) !important;
+            box-shadow: var(--shadow-xl);
+        }
+
+        .navbar-brand {
+            font-size: 1.75rem;
+            font-weight: 900;
+            color: white !important;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        .navbar-nav .nav-link {
+            color: rgba(255, 255, 255, 0.9) !important;
+            font-weight: 500;
+            margin: 0 0.75rem;
+            transition: all 0.3s ease;
+            position: relative;
+            font-size: 1.05rem;
+        }
+
+        .navbar-nav .nav-link:hover,
+        .navbar-nav .nav-link.active {
+            color: white !important;
+            transform: translateY(-2px);
+        }
+
+        .navbar-nav .nav-link::after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 2px;
+            bottom: -5px;
+            left: 50%;
+            background: var(--nsblpa-primary);
+            transition: all 0.3s ease;
+            transform: translateX(-50%);
+            border-radius: 1px;
+        }
+
+        .navbar-nav .nav-link:hover::after,
+        .navbar-nav .nav-link.active::after {
+            width: 100%;
+        }
+
+        /* Hero Section */
+        .hero-section {
+            background: linear-gradient(135deg, #0f172a 0%, #1e293b 50%, #334155 100%);
+            position: relative;
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            overflow: hidden;
+        }
+
+        .hero-section::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-image:
+                radial-gradient(circle at 20% 20%, rgba(99, 102, 241, 0.15) 0%, transparent 50%),
+                radial-gradient(circle at 80% 80%, rgba(139, 92, 246, 0.15) 0%, transparent 50%),
+                radial-gradient(circle at 40% 60%, rgba(16, 185, 129, 0.1) 0%, transparent 50%);
+            animation: float 20s ease-in-out infinite;
+        }
+
+        @keyframes float {
+
+            0%,
+            100% {
+                transform: translateY(0px) rotate(0deg);
+            }
+
+            50% {
+                transform: translateY(-20px) rotate(1deg);
+            }
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 2;
+            color: white;
+        }
+
+        .hero-title {
+            font-size: 4rem;
+            font-weight: 900;
+            margin-bottom: 1.5rem;
+            line-height: 1.1;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        .hero-subtitle {
+            font-size: 1.4rem;
+            color: rgba(255, 255, 255, 0.9);
+            margin-bottom: 2.5rem;
+            line-height: 1.7;
+            font-weight: 400;
+        }
+
+        .hero-buttons .btn {
+            padding: 1rem 2.5rem;
+            font-weight: 600;
+            border-radius: 50px;
+            transition: all 0.3s ease;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            font-size: 1.1rem;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .btn-primary {
+            background: var(--nsblpa-primary);
+            border: none;
+            box-shadow: var(--shadow-lg);
+        }
+
+        .btn-primary::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+            transition: left 0.5s;
+        }
+
+        .btn-primary:hover::before {
+            left: 100%;
+        }
+
+        .btn-primary:hover {
+            transform: translateY(-3px);
+            box-shadow: var(--shadow-xl);
+        }
+
+        .btn-outline-light {
+            border: 2px solid rgba(255, 255, 255, 0.5);
+            backdrop-filter: blur(10px);
+        }
+
+        .btn-outline-light:hover {
+            background: white;
+            color: var(--primary-color);
+            transform: translateY(-3px);
+            box-shadow: var(--shadow-xl);
+        }
+
+        .hero-stats {
+            margin-top: 4rem;
+            position: relative;
+            z-index: 2;
+        }
+
+        .stat-item {
+            text-align: center;
+            padding: 1.5rem;
+            background: rgba(255, 255, 255, 0.05);
+            backdrop-filter: blur(10px);
+            border-radius: 20px;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .stat-number {
+            font-size: 3rem;
+            font-weight: 900;
+            color: white;
+            margin-bottom: 0.5rem;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        .stat-label {
+            color: rgba(255, 255, 255, 0.8);
+            font-size: 1rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            font-weight: 500;
+        }
+
+        /* Hero Visual */
+        .hero-visual {
+            position: relative;
+            height: 600px;
+            z-index: 1;
+        }
+
+        .floating-cards {
+            position: relative;
+            width: 100%;
+            height: 100%;
+        }
+
+        .card-float {
+            position: absolute;
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(15px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            border-radius: 25px;
+            padding: 2rem;
+            color: white;
+            text-align: center;
+            animation: cardFloat 8s ease-in-out infinite;
+            box-shadow: var(--shadow-xl);
+        }
+
+        .card-float i {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+            display: block;
+            background: var(--light-color);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .card-float span {
+            font-weight: 700;
+            font-size: 1.1rem;
+        }
+
+        .card-1 {
+            top: 15%;
+            left: 5%;
+            animation-delay: 0s;
+        }
+
+        .card-2 {
+            top: 45%;
+            right: 15%;
+            animation-delay: 2s;
+        }
+
+        .card-3 {
+            bottom: 15%;
+            left: 25%;
+            animation-delay: 4s;
+        }
+
+        @keyframes cardFloat {
+
+            0%,
+            100% {
+                transform: translateY(0px) rotate(0deg);
+            }
+
+            50% {
+                transform: translateY(-25px) rotate(3deg);
+            }
+        }
+
+        /* Section Styles */
+        .section-title {
+            font-size: 3rem;
+            font-weight: 900;
+            text-align: center;
+            margin-bottom: 3rem;
+            position: relative;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        .section-title::after {
+            content: '';
+            position: absolute;
+            bottom: -15px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 100px;
+            height: 5px;
+            background: var(--nsblpa-primary);
+            border-radius: 3px;
+        }
+
+        /* How It Works Section */
+        .how-it-works {
+            padding: 6rem 0;
+            background: linear-gradient(135deg, #f8fafc 0%, #e2e8f0 100%);
+        }
+
+        .step-card {
+            text-align: center;
+            padding: 3rem 2rem;
+            border-radius: 25px;
+            transition: all 0.4s ease;
+            height: 100%;
+            background: white;
+            box-shadow: var(--shadow-md);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .step-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 5px;
+            background: var(--nsblpa-primary);
+            transform: scaleX(0);
+            transition: transform 0.4s ease;
+        }
+
+        .step-card:hover::before {
+            transform: scaleX(1);
+        }
+
+        .step-card:hover {
+            transform: translateY(-15px);
+            box-shadow: var(--shadow-xl);
+        }
+
+        .step-icon {
+            width: 100px;
+            height: 100px;
+            background: var(--nsblpa-primary);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 2rem;
+            color: white;
+            font-size: 2.5rem;
+            box-shadow: var(--shadow-lg);
+        }
+
+        .step-card h4 {
+            font-size: 1.5rem;
+            font-weight: 800;
+            margin-bottom: 1.5rem;
+            color: var(--dark-color);
+        }
+
+        .step-card p {
+            color: #64748b;
+            line-height: 1.7;
+            font-size: 1.1rem;
+        }
+
+
+        /* Teams Preview */
+        .teams-preview {
+            background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
+            padding: 6rem 0;
+            color: white;
+        }
+
+        .teams-preview .section-title {
+            color: white;
+        }
+
+        .team-card {
+            text-align: center;
+            padding: 2rem;
+            border-radius: 20px;
+            transition: all 0.4s ease;
+            height: 100%;
+            background: rgba(255, 255, 255, 0.05);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .team-card:hover {
+            transform: translateY(-10px);
+            background: rgba(255, 255, 255, 0.1);
+            box-shadow: var(--shadow-xl);
+        }
+
+        .team-logo {
+            margin-bottom: 1.5rem;
+        }
+
+        .team-logo img {
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
+            box-shadow: var(--shadow-lg);
+        }
+
+        .team-name {
+            font-weight: 700;
+            color: white;
+            margin: 0;
+            font-size: 1.2rem;
+        }
+
+        /* Apps Preview */
+        .apps-preview {
+            background: linear-gradient(135deg, #f8fafc 0%, #e2e8f0 100%);
+            padding: 6rem 0;
+        }
+
+        .app-card {
+            background: white;
+            border-radius: 25px;
+            padding: 3rem;
+            text-align: center;
+            transition: all 0.4s ease;
+            height: 100%;
+            box-shadow: var(--shadow-md);
+        }
+
+        .app-card:hover {
+            transform: translateY(-10px);
+            box-shadow: var(--shadow-xl);
+        }
+
+        .app-icon {
+            margin-bottom: 2rem;
+        }
+
+        .btn-outline-primary {
+            color: var(--nsblpa-primary);
+            border-color: var(--nsblpa-primary);
+        }
+
+        .app-icon i {
+            font-size: 4rem;
+            background: var(--nsblpa-primary);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .app-card h5 {
+            font-weight: 800;
+            margin-bottom: 1.5rem;
+            color: var(--dark-color);
+            font-size: 1.4rem;
+        }
+
+        .app-card p {
+            color: #64748b;
+            line-height: 1.7;
+            font-size: 1.1rem;
+        }
+
+        /* CTA Section */
+        .cta-section {
+            background: var(--nsblpa-primary);
+            color: white;
+            text-align: center;
+            padding: 6rem 0;
+            position: relative;
+            overflow: hidden;
+        }
+
+        /* .cta-section::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><circle cx="25" cy="25" r="20" fill="rgba(255,255,255,0.05)"/><circle cx="75" cy="75" r="15" fill="rgba(255,255,255,0.03)"/></svg>');
+            animation: float 15s linear infinite;
+        } */
+
+        .cta-title {
+            font-size: 3rem;
+            font-weight: 900;
+            margin-bottom: 1.5rem;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        .cta-subtitle {
+            font-size: 1.3rem;
+            opacity: 0.9;
+            margin-bottom: 2.5rem;
+            font-weight: 400;
+        }
+
+        /* Footer */
+        .footer {
+            background: #0f172a !important;
+            color: rgba(255, 255, 255, 0.8);
+            padding: 4rem 0 2rem;
+        }
+
+        .footer-title {
+            font-size: 1.75rem;
+            font-weight: 900;
+            color: white;
+            margin-bottom: 1.5rem;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        .footer-heading {
+            color: white;
+            font-weight: 700;
+            margin-bottom: 1.5rem;
+            font-size: 1.2rem;
+        }
+
+        .footer-links {
+            list-style: none;
+            padding: 0;
+        }
+
+        .footer-links li {
+            margin-bottom: 0.75rem;
+        }
+
+        .footer-links a {
+            color: rgba(255, 255, 255, 0.7);
+            text-decoration: none;
+            transition: color 0.3s ease;
+            font-size: 1.05rem;
+        }
+
+        .footer-links a:hover {
+            color: white;
+        }
+
+        .social-links {
+            margin-top: 2rem;
+        }
+
+        .social-link {
+            display: inline-block;
+            width: 50px;
+            height: 50px;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 50%;
+            text-align: center;
+            line-height: 50px;
+            color: white;
+            margin-right: 1rem;
+            transition: all 0.3s ease;
+            font-size: 1.2rem;
+        }
+
+        .social-link:hover {
+            background: var(--primary-color);
+            transform: translateY(-3px);
+            box-shadow: var(--shadow-lg);
+        }
+
+        .footer-divider {
+            border-color: rgba(255, 255, 255, 0.1);
+            margin: 3rem 0 2rem;
+        }
+
+        .footer-copyright {
+            color: rgba(255, 255, 255, 0.6);
+            margin: 0;
+            font-size: 1rem;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .hero-title {
+                font-size: 2.5rem;
+            }
+
+            .hero-subtitle {
+                font-size: 1.2rem;
+            }
+
+            .section-title {
+                font-size: 2.5rem;
+            }
+
+            .hero-buttons .btn {
+                display: block;
+                width: 100%;
+                margin-bottom: 1rem;
+            }
+
+            .floating-cards {
+                display: none;
+            }
+
+            .stat-number {
+                font-size: 2.5rem;
+            }
+        }
+
+        @media (max-width: 576px) {
+            .hero-title {
+                font-size: 2rem;
+            }
+
+            .hero-subtitle {
+                font-size: 1.1rem;
+            }
+
+            .section-title {
+                font-size: 2rem;
+            }
+
+            .cta-title {
+                font-size: 2.5rem;
+            }
+        }
+
+        /* Smooth animations */
+        .fade-in {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: all 0.6s ease;
+        }
+
+        .fade-in.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        #mainNav.scrolled {
+            background: rgba(15, 23, 42, 0.98) !important;
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.12);
+            transition: background .25s ease, box-shadow .25s ease;
+        }
+
+        /* ensure hero visual area can show floating cards without them being clipped */
+        .hero-visual {
+            position: relative;
+            height: 600px;
+            /* desktop height */
+            overflow: visible;
+            /* allow floating cards to be visible outside */
+        }
+
+        /* container for floating cards (absolute inside hero-visual) */
+        .floating-cards {
+            position: absolute;
+            inset: 0;
+            /* top:0; right:0; bottom:0; left:0 */
+            pointer-events: none;
+            /* so they don't block clicks on page under them */
+        }
+
+        /* individual floating cards */
+        .card-float {
+            pointer-events: auto;
+            background: rgba(255, 255, 255, 0.08);
+            border-radius: 20px;
+            padding: 1.25rem;
+            color: white;
+            text-align: center;
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.12);
+            transition: transform .4s cubic-bezier(.2, .9, .2, 1), opacity .4s;
+            will-change: transform;
+        }
+
+        /* maintain spacing + vertical centering for stat items */
+        .stat-item {
+            background: rgba(255, 255, 255, 0.04);
+            border-radius: 14px;
+            padding: 1.25rem;
+            min-height: 120px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            gap: .25rem;
+        }
+
+        /* fade-in reveal (keeps same classes used in your HTML) */
+        .fade-in {
+            opacity: 0;
+            transform: translateY(24px);
+            transition: opacity .6s ease, transform .6s ease;
+        }
+
+        .fade-in.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        /* smaller stat numbers on very small devices */
+        @media (max-width: 576px) {
+            .stat-number {
+                font-size: 1.5rem !important;
+            }
+
+            .hero-visual {
+                height: 420px;
+            }
+
+            .stat-label {
+                font-size: 0.5rem;
+            }
+        }
+
+        /* hide floating-cards on medium and smaller devices (fix overlap) */
+        @media (max-width: 992px) {
+            .floating-cards {
+                display: none !important;
+            }
+
+            .hero-title {
+                text-align: center;
+            }
+
+            .hero-subtitle {
+                text-align: center;
+            }
+
+            .hero-buttons {
+                display: flex;
+                justify-content: center;
+                gap: .75rem;
+                flex-wrap: wrap;
+            }
+        }
+
+        /* small polish so card floats have subtle movement on hover (desktop only) */
+        @media (min-width: 993px) {
+            .card-float:hover {
+                transform: translateY(-6px) rotate(-1deg);
+            }
+        }
+
+        .hero-overlay {
+            background: rgba(11, 19, 43, 0.55);
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top" id="mainNav">
+        <div class="container">
+            <a class="navbar-brand fw-bold" href="index.html">
+                <i class="fas fa-chart-line me-2"></i>SalesBets
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link active" href="index.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="ownership.html">Ownership</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="teams.html">Teams</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="apps.html">Apps</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="contact.html">Contact</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero-section"
+        style="background-image: url('https://images.unsplash.com/photo-1483721310020-03333e577078?q=80&w=1920&auto=format&fit=crop'); background-size: cover; background-position: center;">
+        <div class="hero-overlay"></div>
+        <div class="container">
+            <div class="row align-items-center min-vh-100">
+                <div class="col-lg-6" style="margin-top: 110px;">
+                    <div class="hero-content fade-in">
+                        <h1 class="hero-title mb-4">
+                            National Sales Betting <span class="text-gradient">League</span>
+                        </h1>
+                        <p class="hero-subtitle mb-4">
+                            The premier platform for professional sales betting.
+                            Join the most competitive league in the industry and showcase your skills.
+                        </p>
+                        <div class="hero-buttons">
+                            <a href="#highlights" class="btn btn-primary btn-lg mb-3">
+                                <i class="fas fa-play me-2"></i>Watch Highlights
+                            </a>
+                            <a href="#news" class="btn btn-outline-light btn-lg mb-3">
+                                <i class="fas fa-newspaper me-2"></i>Trending News
+                            </a>
+                        </div>
+                        <div class="hero-stats mt-5">
+                            <div class="row text-center">
+                                <div class="col-4">
+                                    <div class="stat-item">
+                                        <h3 class="stat-number">7</h3>
+                                        <p class="stat-label">Elite Teams</p>
+                                    </div>
+                                </div>
+                                <div class="col-4">
+                                    <div class="stat-item">
+                                        <h3 class="stat-number">50+</h3>
+                                        <p class="stat-label">Players</p>
+                                    </div>
+                                </div>
+                                <div class="col-4">
+                                    <div class="stat-item">
+                                        <h3 class="stat-number">100%</h3>
+                                        <p class="stat-label">Professional</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="hero-visual d-none d-lg-block">
+                        <div class="floating-cards">
+                            <div class="card-float card-1">
+                                <i class="fas fa-trophy"></i>
+                                <span>Championships</span>
+                            </div>
+                            <div class="card-float card-2">
+                                <i class="fas fa-chart-line"></i>
+                                <span>Analytics</span>
+                            </div>
+                            <div class="card-float card-3">
+                                <i class="fas fa-users"></i>
+                                <span>Community</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Trending News Section -->
+    <section id="news" class="news-section py-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8 mx-auto text-center">
+                    <h2 class="section-title mb-5">Trending News</h2>
+                </div>
+            </div>
+            <div class="row g-4">
+                <div class="col-md-6 col-lg-3">
+                    <article class="news-card h-100">
+                        <div class="news-image"
+                            style="background-image:url('https://images.unsplash.com/photo-1499346030926-9a72daac6c63?q=80&w=800&auto=format&fit=crop');"
+                            aria-label="Miami Revenue Runners lead"></div>
+                        <div class="news-content">
+                            <span class="badge bg-danger me-2">NSBLPA</span>
+                            <span class="badge bg-dark">2025 Season</span>
+                            <h6 class="mt-3">Miami Revenue Runners Take the Lead in a Fierce Sales Showdown!</h6>
+                            <a class="stretched-link" href="#">Read more</a>
+                        </div>
+                    </article>
+                </div>
+                <div class="col-md-6 col-lg-3">
+                    <article class="news-card h-100">
+                        <div class="news-image"
+                            style="background-image:url('https://images.unsplash.com/photo-1547347298-4074fc3086f0?q=80&w=800&auto=format&fit=crop');"
+                            aria-label="NY record-smashing"></div>
+                        <div class="news-content">
+                            <span class="badge bg-danger me-2">NSBLPA</span>
+                            <span class="badge bg-dark">2025 Season</span>
+                            <h6 class="mt-3">New York Profit Pursuers Set the Pace with Record-Smashing Sales!</h6>
+                            <a class="stretched-link" href="#">Read more</a>
+                        </div>
+                    </article>
+                </div>
+                <div class="col-md-6 col-lg-3">
+                    <article class="news-card h-100">
+                        <div class="news-image"
+                            style="background-image:url('https://images.unsplash.com/photo-1530533718754-001d2668365a?q=80&w=800&auto=format&fit=crop');"
+                            aria-label="Texas team to beat"></div>
+                        <div class="news-content">
+                            <span class="badge bg-danger me-2">NSBLPA</span>
+                            <span class="badge bg-dark">2025 Season</span>
+                            <h6 class="mt-3">Texas Deal Makers Prove Why They're the Team to Beat!</h6>
+                            <a class="stretched-link" href="#">Read more</a>
+                        </div>
+                    </article>
+                </div>
+                <div class="col-md-6 col-lg-3">
+                    <article class="news-card h-100">
+                        <div class="news-image"
+                            style="background-image:url('https://images.unsplash.com/photo-1551958219-acbc608c6377?q=80&w=800&auto=format&fit=crop');"
+                            aria-label="Chicago sinks competition"></div>
+                        <div class="news-content">
+                            <span class="badge bg-danger me-2">NSBLPA</span>
+                            <span class="badge bg-dark">2025 Season</span>
+                            <h6 class="mt-3">Chicago Sales Sharks Sink Their Competition with Killer Deals!</h6>
+                            <a class="stretched-link" href="#">Read more</a>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- League Overview Section -->
+    <section class="league-overview py-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8 mx-auto text-center">
+                    <h2 class="section-title mb-5">About NSBLPA</h2>
+                    <p class="lead mb-5">The National Sales Betting League Players Association is the premier
+                        organization for professional sales betting competition.</p>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-4 mb-4">
+                    <div class="step-card">
+                        <div class="step-icon">
+                            <i class="fas fa-medal"></i>
+                        </div>
+                        <h4>Professional Competition</h4>
+                        <p>Compete at the highest level with the most skilled sales professionals in the industry.</p>
+                    </div>
+                </div>
+                <div class="col-lg-4 mb-4">
+                    <div class="step-card">
+                        <div class="step-icon">
+                            <i class="fas fa-chart-bar"></i>
+                        </div>
+                        <h4>Advanced Analytics</h4>
+                        <p>Track your performance with comprehensive analytics and detailed performance metrics.</p>
+                    </div>
+                </div>
+                <div class="col-lg-4 mb-4">
+                    <div class="step-card">
+                        <div class="step-icon">
+                            <i class="fas fa-network-wired"></i>
+                        </div>
+                        <h4>Network & Connect</h4>
+                        <p>Build valuable connections with industry leaders and fellow professionals.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Standings Section -->
+    <section class="standings py-5 bg-light">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8 mx-auto text-center">
+                    <h2 class="section-title mb-4">Sales Bets League</h2>
+                </div>
+            </div>
+            <div class="table-responsive shadow-sm rounded-3">
+                <table class="table table-hover align-middle mb-0 standings-table">
+                    <thead class="table-dark">
+                        <tr>
+                            <th scope="col">POS</th>
+                            <th scope="col">CLUB</th>
+                            <th scope="col">W</th>
+                            <th scope="col">D</th>
+                            <th scope="col">L</th>
+                            <th scope="col">PTS</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>01</td>
+                            <td>Miami Revenue Runners</td>
+                            <td>6</td>
+                            <td>4</td>
+                            <td>0</td>
+                            <td>30</td>
+                        </tr>
+                        <tr>
+                            <td>02</td>
+                            <td>New York Profit Pursuers</td>
+                            <td>2</td>
+                            <td>2</td>
+                            <td>0</td>
+                            <td>17</td>
+                        </tr>
+                        <tr>
+                            <td>03</td>
+                            <td>Texas Deal Makers</td>
+                            <td>3</td>
+                            <td>2</td>
+                            <td>1</td>
+                            <td>21</td>
+                        </tr>
+                        <tr>
+                            <td>04</td>
+                            <td>Chicago Sales Sharks</td>
+                            <td>2</td>
+                            <td>1</td>
+                            <td>1</td>
+                            <td>12</td>
+                        </tr>
+                        <tr>
+                            <td>05</td>
+                            <td>Atlanta Revenue Rockstars</td>
+                            <td>3</td>
+                            <td>1</td>
+                            <td>2</td>
+                            <td>14</td>
+                        </tr>
+                        <tr>
+                            <td>06</td>
+                            <td>Denver Deal Dynamos</td>
+                            <td>4</td>
+                            <td>2</td>
+                            <td>2</td>
+                            <td>18</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <div class="text-center mt-3">
+                <a href="#" class="btn btn-outline-primary btn-sm">View Full Table</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Match Highlights -->
+    <section id="highlights" class="match-highlights py-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8 mx-auto text-center">
+                    <h2 class="section-title mb-5">Match Highlights</h2>
+                </div>
+            </div>
+            <div class="row g-4">
+                <div class="col-md-6 col-lg-3">
+                    <div class="highlight-card h-100">
+                        <div class="time">06:00 PM</div>
+                        <h6>Miami Revenue Runners Race to the Top!</h6>
+                        <p class="small text-muted mb-0">National Sales Bet League 2025 Season</p>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-3">
+                    <div class="highlight-card h-100">
+                        <div class="time">06:00 PM</div>
+                        <h6>New York Profit Pursuers Lead the Charge!</h6>
+                        <p class="small text-muted mb-0">National Sales Bet League 2025 Season</p>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-3">
+                    <div class="highlight-card h-100">
+                        <div class="time">06:00 PM</div>
+                        <h6>Texas Deal Makers Dominate the Stage!</h6>
+                        <p class="small text-muted mb-0">National Sales Bet League 2025 Season</p>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-3">
+                    <div class="highlight-card h-100">
+                        <div class="time">06:00 PM</div>
+                        <h6>Chicago Sales Sharks Sink the Competition!</h6>
+                        <p class="small text-muted mb-0">National Sales Bet League 2025 Season</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Next Match + Live CTA -->
+    <section class="next-match py-5 bg-light">
+        <div class="container">
+            <div class="row align-items-center g-4">
+                <div class="col-lg-6">
+                    <div class="next-card p-4 h-100">
+                        <div class="d-flex align-items-center mb-5">
+                            <img src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e?q=80&w=200&auto=format&fit=crop"
+                                alt="Miami Revenue Runners" class="rounded-circle me-3" width="56" height="56">
+                            <div>
+                                <h6 class="mb-0">Miami Revenue Runners</h6>
+                                <small class="text-muted">March 26th, 2025 • Brickell, Miami</small>
+                            </div>
+                        </div>
+                        <a href="#" class="btn btn-primary me-2 mb-2"><i class="fas fa-video me-2"></i>Watch Live</a>
+                        <a href="#" class="btn btn-outline-primary mb-2"><i class="fas fa-tv me-2"></i>Start Free
+                            Trial</a>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="live-banner p-5 text-center text-lg-start"
+                        style="background-image:url('https://images.unsplash.com/photo-1483721310020-03333e577078?q=80&w=1600&auto=format&fit=crop'); background-size:cover; background-position:center;">
+                        <div class="overlay"></div>
+                        <div class="content position-relative">
+                            <h3 class="text-white fw-bold">Watch the Amazing Live Season Now</h3>
+                            <a href="#" class="btn btn-light mt-3"><i class="fas fa-broadcast-tower me-2"></i>Watch Live
+                                Here</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Gallery -->
+    <section class="gallery py-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8 mx-auto text-center">
+                    <h2 class="section-title mb-5">Sales Bet Gallery</h2>
+                </div>
+            </div>
+            <div class="row g-3">
+                <div class="col-6 col-md-4 col-lg-2">
+                    <div class="gallery-item"
+                        style="background-image:url('https://images.unsplash.com/photo-1483721310020-03333e577078?q=80&w=600&auto=format&fit=crop');">
+                    </div>
+                </div>
+                <div class="col-6 col-md-4 col-lg-2">
+                    <div class="gallery-item"
+                        style="background-image:url('https://images.unsplash.com/photo-1501785888041-af3ef285b470?q=80&w=600&auto=format&fit=crop');">
+                    </div>
+                </div>
+                <div class="col-6 col-md-4 col-lg-2">
+                    <div class="gallery-item"
+                        style="background-image:url('https://images.unsplash.com/photo-1547347298-4074fc3086f0?q=80&w=600&auto=format&fit=crop');">
+                    </div>
+                </div>
+                <div class="col-6 col-md-4 col-lg-2">
+                    <div class="gallery-item"
+                        style="background-image:url('https://images.unsplash.com/photo-1530533718754-001d2668365a?q=80&w=600&auto=format&fit=crop');">
+                    </div>
+                </div>
+                <div class="col-6 col-md-4 col-lg-2">
+                    <div class="gallery-item"
+                        style="background-image:url('https://images.unsplash.com/photo-1551958219-acbc608c6377?q=80&w=600&auto=format&fit=crop');">
+                    </div>
+                </div>
+                <div class="col-6 col-md-4 col-lg-2">
+                    <div class="gallery-item"
+                        style="background-image:url('https://images.unsplash.com/photo-1499346030926-9a72daac6c63?q=80&w=600&auto=format&fit=crop');">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Teams Preview -->
+    <section class="teams-preview">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8 mx-auto text-center">
+                    <h2 class="section-title mb-5 fade-in">Our Elite Teams</h2>
+                    <p class="lead mb-5 fade-in">Seven powerhouse teams competing across different sports and markets
+                    </p>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-3 col-sm-6 mb-4">
+                    <div class="team-card fade-in">
+                        <div class="team-logo">
+                            <img src="https://dummyimage.com/80x80/ef4444/ffffff.png&text=NY"
+                                alt="New York Profit Pursuers" class="img-fluid">
+                        </div>
+                        <h6 class="team-name">New York Profit Pursuers</h6>
+                    </div>
+                </div>
+                <div class="col-md-3 col-sm-6 mb-4">
+                    <div class="team-card fade-in">
+                        <div class="team-logo">
+                            <img src="https://dummyimage.com/80x80/3b82f6/ffffff.png&text=ATL"
+                                alt="Atlanta Revenue Rockstars" class="img-fluid">
+                        </div>
+                        <h6 class="team-name">Atlanta Revenue Rockstars</h6>
+                    </div>
+                </div>
+                <div class="col-md-3 col-sm-6 mb-4">
+                    <div class="team-card fade-in">
+                        <div class="team-logo">
+                            <img src="https://dummyimage.com/80x80/10b981/ffffff.png&text=DEN" alt="Denver Deal Dynamos"
+                                class="img-fluid">
+                        </div>
+                        <h6 class="team-name">Denver Deal Dynamos</h6>
+                    </div>
+                </div>
+                <div class="col-md-3 col-sm-6 mb-4">
+                    <div class="team-card fade-in">
+                        <div class="team-logo">
+                            <img src="https://dummyimage.com/80x80/f59e0b/ffffff.png&text=CHI"
+                                alt="Chicago Sales Sharks" class="img-fluid">
+                        </div>
+                        <h6 class="team-name">Chicago Sales Sharks</h6>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-3 col-sm-6 mb-4">
+                    <div class="team-card fade-in">
+                        <div class="team-logo">
+                            <img src="https://dummyimage.com/80x80/8b5cf6/ffffff.png&text=TEX" alt="Texas Deal Makers"
+                                class="img-fluid">
+                        </div>
+                        <h6 class="team-name">Texas Deal Makers</h6>
+                    </div>
+                </div>
+                <div class="col-md-3 col-sm-6 mb-4">
+                    <div class="team-card fade-in">
+                        <div class="team-logo">
+                            <img src="https://dummyimage.com/80x80/06b6d4/ffffff.png&text=DC" alt="DC Sales Eagles"
+                                class="img-fluid">
+                        </div>
+                        <h6 class="team-name">DC Sales Eagles</h6>
+                    </div>
+                </div>
+                <div class="col-md-3 col-sm-6 mb-4">
+                    <div class="team-card fade-in">
+                        <div class="team-logo">
+                            <img src="https://dummyimage.com/80x80/ec4899/ffffff.png&text=MIA"
+                                alt="Miami Revenue Runners" class="img-fluid">
+                        </div>
+                        <h6 class="team-name">Miami Revenue Runners</h6>
+                    </div>
+                </div>
+                <div class="col-md-3 col-sm-6 mb-4">
+                    <div class="team-card fade-in">
+                        <div class="team-logo">
+                            <img src="https://dummyimage.com/80x80/6366f1/ffffff.png&text=SB" alt="SalesBets"
+                                class="img-fluid">
+                        </div>
+                        <h6 class="team-name">More Coming Soon</h6>
+                    </div>
+                </div>
+            </div>
+            <div class="text-center mt-5">
+                <a href="teams.html" class="btn btn-outline-light btn-lg">
+                    <i class="fas fa-arrow-right me-2"></i>View All Teams
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Apps Preview -->
+    <section class="apps-preview">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8 mx-auto text-center">
+                    <h2 class="section-title mb-5 fade-in">Download Our Apps</h2>
+                    <p class="lead mb-5 fade-in">Get the complete SalesBets experience on your mobile device</p>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-6 mb-4">
+                    <div class="app-card fade-in">
+                        <div class="app-icon">
+                            <i class="fab fa-android text-success"></i>
+                        </div>
+                        <h5>Team Apps</h5>
+                        <p>Follow your favorite teams, get exclusive content, and connect with other fans in your city.
+                        </p>
+                    </div>
+                </div>
+                <div class="col-md-6 mb-4">
+                    <div class="app-card fade-in">
+                        <div class="app-icon">
+                            <i class="fas fa-mobile-alt text-primary"></i>
+                        </div>
+                        <h5>Fan Apps</h5>
+                        <p>Connect with the global community, share predictions, and compete with fans worldwide.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="text-center mt-4">
+                <a href="apps.html" class="btn btn-primary btn-lg">
+                    <i class="fas fa-download me-2"></i>View All Apps
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta-section">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8 mx-auto text-center">
+                    <h2 class="cta-title mb-4">Ready to Join the Revolution?</h2>
+                    <p class="cta-subtitle mb-4">Join thousands of fans who are already experiencing the future of
+                        sports entertainment.</p>
+                    <a href="contact.html" class="btn btn-light btn-lg">
+                        <i class="fas fa-rocket me-2"></i>Get Started Today
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer bg-dark text-light py-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-4 mb-4">
+                    <h5 class="footer-title">
+                        <i class="fas fa-trophy me-2"></i>NSBLPA
+                    </h5>
+                    <p class="footer-text">The premier platform for professional sales betting competition.</p>
+                    <div class="social-links">
+                        <a href="#" class="social-link"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-facebook"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-linkedin"></i></a>
+                    </div>
+                </div>
+                <div class="col-lg-2 col-md-6 mb-4">
+                    <h6 class="footer-heading">Quick Links</h6>
+                    <ul class="footer-links">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="teams.html">Teams</a></li>
+                        <li><a href="apps.html">Apps</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-2 col-md-6 mb-4">
+                    <h6 class="footer-heading">Company</h6>
+                    <ul class="footer-links">
+                        <li><a href="ownership.html">Ownership</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                        <li><a href="#">Privacy Policy</a></li>
+                        <li><a href="#">Terms of Service</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-4 mb-4">
+                    <h6 class="footer-heading">Newsletter</h6>
+                    <p class="footer-text">Stay updated with the latest league news and updates.</p>
+                    <div class="newsletter-form">
+                        <div class="input-group">
+                            <input type="email" class="form-control" placeholder="Enter your email">
+                            <button class="btn btn-primary" type="button">Subscribe</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <hr class="footer-divider">
+            <div class="row">
+                <div class="col-md-6">
+                    <p class="footer-copyright">&copy; 2025 NSBLPA. All rights reserved.</p>
+                </div>
+                <div class="col-md-6 text-md-end">
+                    <p class="footer-copyright">Made with <i class="fas fa-heart text-danger"></i> for professionals</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+
+    <script>
+        // Enhanced JavaScript for better interactivity
+        document.addEventListener('DOMContentLoaded', function () {
+            // Navbar scroll effect
+            const navbar = document.getElementById('mainNav');
+
+            window.addEventListener('scroll', function () {
+                if (window.scrollY > 50) {
+                    navbar.classList.add('scrolled');
+                } else {
+                    navbar.classList.remove('scrolled');
+                }
+            });
+
+            // Fade-in animation on scroll
+            const observerOptions = {
+                threshold: 0.1,
+                rootMargin: '0px 0px -50px 0px'
+            };
+
+            const observer = new IntersectionObserver(function (entries) {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('visible');
+                    }
+                });
+            }, observerOptions);
+
+            // Observe all fade-in elements
+            const fadeElements = document.querySelectorAll('.fade-in');
+            fadeElements.forEach(el => observer.observe(el));
+
+            // Counter animation for stats
+            const statNumbers = document.querySelectorAll('.stat-number');
+            let statsAnimated = false;
+
+            const animateCounter = (element, target, duration = 2000) => {
+                let start = 0;
+                const increment = target / (duration / 16);
+
+                const timer = setInterval(() => {
+                    start += increment;
+                    if (start >= target) {
+                        element.textContent = target + (target === 50 ? '+' : target === 100 ? '%' : '');
+                        clearInterval(timer);
+                    } else {
+                        element.textContent = Math.floor(start) + (target === 50 ? '+' : target === 100 ? '%' : '');
+                    }
+                }, 16);
+            };
+
+            // Stats section observer
+            const statsSection = document.querySelector('.hero-stats');
+            if (statsSection) {
+                const statsObserver = new IntersectionObserver(function (entries) {
+                    entries.forEach(entry => {
+                        if (entry.isIntersecting && !statsAnimated) {
+                            statsAnimated = true;
+                            statNumbers.forEach(stat => {
+                                const text = stat.textContent;
+                                let target = parseInt(text);
+                                if (text.includes('+')) target = 50;
+                                else if (text.includes('%')) target = 100;
+                                else if (text === '7') target = 7;
+
+                                animateCounter(stat, target);
+                            });
+                        }
+                    });
+                }, { threshold: 0.5 });
+
+                statsObserver.observe(statsSection);
+            }
+
+            // Enhanced card hover effects
+            const cards = document.querySelectorAll('.step-card, .athlete-card, .team-card, .app-card');
+            cards.forEach(card => {
+                card.addEventListener('mouseenter', function () {
+                    this.style.transform = 'translateY(-15px) scale(1.02)';
+                    this.style.transition = 'all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275)';
+                });
+
+                card.addEventListener('mouseleave', function () {
+                    this.style.transform = 'translateY(0) scale(1)';
+                });
+            });
+
+            // Newsletter form handling
+            const newsletterBtn = document.querySelector('.newsletter-form button');
+            if (newsletterBtn) {
+                newsletterBtn.addEventListener('click', function (e) {
+                    e.preventDefault();
+                    const input = this.parentNode.querySelector('input');
+                    const email = input.value.trim();
+
+                    if (email && isValidEmail(email)) {
+                        this.innerHTML = '<i class="fas fa-spinner fa-spin me-2"></i>Subscribing...';
+                        this.disabled = true;
+
+                        setTimeout(() => {
+                            this.innerHTML = '<i class="fas fa-check me-2"></i>Subscribed!';
+                            input.value = '';
+
+                            setTimeout(() => {
+                                this.innerHTML = 'Subscribe';
+                                this.disabled = false;
+                            }, 2000);
+                        }, 1500);
+                    } else {
+                        showNotification('Please enter a valid email address.', 'error');
+                    }
+                });
+            }
+
+            function isValidEmail(email) {
+                return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
+            }
+
+            function showNotification(message, type = 'info') {
+                const notification = document.createElement('div');
+                notification.className = `alert alert-${type === 'error' ? 'danger' : 'success'} alert-dismissible fade show`;
+                notification.style.cssText = `
+                    position: fixed;
+                    top: 100px;
+                    right: 20px;
+                    z-index: 9999;
+                    min-width: 300px;
+                    box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+                `;
+                notification.innerHTML = `
+                    ${message}
+                    <button type="button" class="btn-close" data-bs-dismiss="alert"></button>
+                `;
+                document.body.appendChild(notification);
+
+                setTimeout(() => {
+                    if (notification.parentNode) {
+                        notification.remove();
+                    }
+                }, 5000);
+            }
+
+            // Smooth scrolling for anchor links
+            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+                anchor.addEventListener('click', function (e) {
+                    e.preventDefault();
+                    const target = document.querySelector(this.getAttribute('href'));
+                    if (target) {
+                        target.scrollIntoView({
+                            behavior: 'smooth',
+                            block: 'start'
+                        });
+                    }
+                });
+            });
+        });
+    </script>
+</body>
+
+</html>
