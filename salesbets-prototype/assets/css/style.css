@@ -626,7 +626,7 @@ html {
 
 /* Athletes Page Styles */
 .athletes-hero {
-    background: linear-gradient(135deg, #0f172a 0%, #1e293b 50%, #334155 100%);
+    background: radial-gradient(900px 500px at 0% 0%, rgba(243,201,69,.12), transparent 50%), linear-gradient(0deg, rgba(8,12,20,.66), rgba(8,12,20,.66)), url('https://salesbets.com/assets/img/background.jpg') center/cover no-repeat;
     position: relative;
     min-height: 100vh;
     display: flex;
@@ -641,7 +641,7 @@ html {
     left: 0;
     right: 0;
     bottom: 0;
-    background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 1000"><defs><radialGradient id="a" cx="50%" cy="50%" r="50%"><stop offset="0%" stop-color="%234f46e5" stop-opacity="0.1"/><stop offset="100%" stop-color="%234f46e5" stop-opacity="0"/></radialGradient></defs><circle cx="200" cy="200" r="300" fill="url(%23a)"/><circle cx="800" cy="300" r="200" fill="url(%23a)"/><circle cx="400" cy="700" r="250" fill="url(%23a)"/></svg>');
+    background: radial-gradient(900px 500px at 0% 0%, rgba(243,201,69,.12), transparent 50%), linear-gradient(0deg, rgba(8,12,20,.66), rgba(8,12,20,.66)), url('https://salesbets.com/assets/img/background.jpg') center/cover no-repeat;
     opacity: 0.3;
 }
 
@@ -948,7 +948,7 @@ html {
 
 /* Teams Page Styles */
 .teams-hero {
-    background: linear-gradient(135deg, #0f172a 0%, #1e293b 50%, #334155 100%);
+    background: radial-gradient(900px 500px at 0% 0%, rgba(243,201,69,.12), transparent 50%), linear-gradient(0deg, rgba(8,12,20,.66), rgba(8,12,20,.66)), url('https://salesbets.com/assets/img/background.jpg') center/cover no-repeat;
     position: relative;
     min-height: 100vh;
     display: flex;
@@ -963,7 +963,7 @@ html {
     left: 0;
     right: 0;
     bottom: 0;
-    background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 1000"><defs><radialGradient id="a" cx="50%" cy="50%" r="50%"><stop offset="0%" stop-color="%234f46e5" stop-opacity="0.1"/><stop offset="100%" stop-color="%234f46e5" stop-opacity="0"/></radialGradient></defs><circle cx="200" cy="200" r="300" fill="url(%23a)"/><circle cx="800" cy="300" r="200" fill="url(%23a)"/><circle cx="400" cy="700" r="250" fill="url(%23a)"/></svg>');
+    background: radial-gradient(900px 500px at 0% 0%, rgba(243,201,69,.12), transparent 50%), linear-gradient(0deg, rgba(8,12,20,.66), rgba(8,12,20,.66)), url('https://salesbets.com/assets/img/background.jpg') center/cover no-repeat;
     opacity: 0.3;
 }
 
@@ -1120,7 +1120,7 @@ html {
 
 /* Apps Page Styles */
 .apps-hero {
-    background: linear-gradient(135deg, #0f172a 0%, #1e293b 50%, #334155 100%);
+    background: radial-gradient(900px 500px at 0% 0%, rgba(243,201,69,.12), transparent 50%), linear-gradient(0deg, rgba(8,12,20,.66), rgba(8,12,20,.66)), url('https://salesbets.com/assets/img/background.jpg') center/cover no-repeat;
     position: relative;
     min-height: 100vh;
     display: flex;
@@ -1135,7 +1135,7 @@ html {
     left: 0;
     right: 0;
     bottom: 0;
-    background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 1000"><defs><radialGradient id="a" cx="50%" cy="50%" r="50%"><stop offset="0%" stop-color="%234f46e5" stop-opacity="0.1"/><stop offset="100%" stop-color="%234f46e5" stop-opacity="0"/></radialGradient></defs><circle cx="200" cy="200" r="300" fill="url(%23a)"/><circle cx="800" cy="300" r="200" fill="url(%23a)"/><circle cx="400" cy="700" r="250" fill="url(%23a)"/></svg>');
+    background: radial-gradient(900px 500px at 0% 0%, rgba(243,201,69,.12), transparent 50%), linear-gradient(0deg, rgba(8,12,20,.66), rgba(8,12,20,.66)), url('https://salesbets.com/assets/img/background.jpg') center/cover no-repeat;
     opacity: 0.3;
 }
 
@@ -1292,7 +1292,7 @@ html {
 
 /* Ownership Page Styles */
 .ownership-hero {
-    background: linear-gradient(135deg, #0f172a 0%, #1e293b 50%, #334155 100%);
+    background: radial-gradient(900px 500px at 0% 0%, rgba(243,201,69,.12), transparent 50%), linear-gradient(0deg, rgba(8,12,20,.66), rgba(8,12,20,.66)), url('https://salesbets.com/assets/img/background.jpg') center/cover no-repeat;
     position: relative;
     min-height: 100vh;
     display: flex;
@@ -1307,7 +1307,7 @@ html {
     left: 0;
     right: 0;
     bottom: 0;
-    background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 1000"><defs><radialGradient id="a" cx="50%" cy="50%" r="50%"><stop offset="0%" stop-color="%234f46e5" stop-opacity="0.1"/><stop offset="100%" stop-color="%234f46e5" stop-opacity="0"/></radialGradient></defs><circle cx="200" cy="200" r="300" fill="url(%23a)"/><circle cx="800" cy="300" r="200" fill="url(%23a)"/><circle cx="400" cy="700" r="250" fill="url(%23a)"/></svg>');
+    background: radial-gradient(900px 500px at 0% 0%, rgba(243,201,69,.12), transparent 50%), linear-gradient(0deg, rgba(8,12,20,.66), rgba(8,12,20,.66)), url('https://salesbets.com/assets/img/background.jpg') center/cover no-repeat;
     opacity: 0.3;
 }
 
@@ -1542,7 +1542,7 @@ html {
 
 /* Contact Page Styles */
 .contact-hero {
-    background: linear-gradient(135deg, #0f172a 0%, #1e293b 50%, #334155 100%);
+    background: radial-gradient(900px 500px at 0% 0%, rgba(243,201,69,.12), transparent 50%), linear-gradient(0deg, rgba(8,12,20,.66), rgba(8,12,20,.66)), url('https://salesbets.com/assets/img/background.jpg') center/cover no-repeat;
     position: relative;
     min-height: 100vh;
     display: flex;
@@ -1557,7 +1557,7 @@ html {
     left: 0;
     right: 0;
     bottom: 0;
-    background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 1000"><defs><radialGradient id="a" cx="50%" cy="50%" r="50%"><stop offset="0%" stop-color="%234f46e5" stop-opacity="0.1"/><stop offset="100%" stop-color="%234f46e5" stop-opacity="0"/></radialGradient></defs><circle cx="200" cy="200" r="300" fill="url(%23a)"/><circle cx="800" cy="300" r="200" fill="url(%23a)"/><circle cx="400" cy="700" r="250" fill="url(%23a)"/></svg>');
+    background: radial-gradient(900px 500px at 0% 0%, rgba(243,201,69,.12), transparent 50%), linear-gradient(0deg, rgba(8,12,20,.66), rgba(8,12,20,.66)), url('https://salesbets.com/assets/img/background.jpg') center/cover no-repeat;
     opacity: 0.3;
 }
 
